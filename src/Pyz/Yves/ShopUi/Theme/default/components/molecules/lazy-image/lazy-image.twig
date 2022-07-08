@@ -1,0 +1,6 @@
+{% extends molecule('lazy-image', '@SprykerShop:ShopUi') %}
+
+{% block body %}
+    {% set data = data | merge({'imageSrc': data.imageSrc | cloudimage({}, {grey: 1}) }) %}
+    {{ parent() }}
+{% endblock %}

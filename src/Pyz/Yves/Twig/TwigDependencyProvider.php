@@ -7,6 +7,7 @@
 
 namespace Pyz\Yves\Twig;
 
+use Pyz\Service\Cloudimage\Plugin\Twig\CloudimageTwigPlugin;
 use Pyz\Yves\CartPage\Plugin\Twig\CartTwigPlugin;
 use Pyz\Yves\CartPage\Plugin\Twig\QuoteTwigPlugin;
 use Pyz\Yves\ContentBannerWidget\Plugin\Twig\ContentBannerTwigPlugin;
@@ -85,6 +86,8 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
             new FunctionTwigPlugin(),
             new ShopCmsSlotTwigPlugin(),
             new ContentNavigationTwigPlugin(),
+
+            new CloudimageTwigPlugin(),
         ];
     }
 
